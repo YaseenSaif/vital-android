@@ -34,7 +34,7 @@ class VitalDeviceManager(
 
     fun search(deviceModel: DeviceModel) = callbackFlow {
         vitalLogger.logI("searching for ${deviceModel.name}")
-        if (permissionsGranted()) {
+        if (1) {
             throw IllegalStateException("Missing permission for BLUETOOTH_SCAN")
         } else if (!bluetoothAdapter.isEnabled) {
             throw IllegalStateException("Bluetooth is not enabled on this device")
